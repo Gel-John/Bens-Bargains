@@ -1,35 +1,27 @@
-//entry point
-
-//* importing modules
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
-const cors = require('cors');
-const path = require('path');
-// var expressHbs = require("express-handlebars");
-
+const PORT = process.env.PORT || 3001;
 const app = express();
-const port = 3000;
-const route = require('./routes/route')
+// const apiRoutes = require("./routes/apiRoutes");
 
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'})) //extname helps identify the name of the files in view folder as `.hbs`
-// app.set('view engine', '.hbs');//this refers to the engine above '.hbs'
+// Serve up static assets
+app.use(express.static(path.join(__dirname, "./public/index.html")));
 
-//defining route
-app.use('/api', route)
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
 
-//add middleware
-app.use(corse());
+// parse application/json
 app.use(bodyParser.json());
-//static files
-app.use(express.static(app.join(__dirname, 'public')));
+// Use apiRoutes
+// app.use("/api", apiRoutes);
 
-//route for testing
-app.get('/', (req, res) => {
-  res.send('testing this route');
-})
-app.listen(port, () => {
-  console.log('nice! the site is live at', port);
-})
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  // res.send("hello world")
+});
+
+app.listen(PORT, function() {
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
+});
