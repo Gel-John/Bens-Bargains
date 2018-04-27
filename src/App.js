@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { Footer } from "react-materialize";
 
 import About from "./pages/About";
-// import Search from "./pages/Search";
 import Header from "./components/Header";
 import Login from "./components/Login";
 
