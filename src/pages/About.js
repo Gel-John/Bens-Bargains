@@ -1,7 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Container from "../components/Container";
-import { Row, Col } from "react-materialize";
+import { Row, Col, Container } from "react-materialize";
 
 const About = () =>
   <div>

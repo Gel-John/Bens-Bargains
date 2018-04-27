@@ -5,10 +5,10 @@ import "./Header.css";
 class Header extends Component {
   
   render() {
-    return(
-      <Navbar brand='logo' right>
-        <NavItem onClick={() => console.log('test click')}>Getting started</NavItem>
-        <NavItem href='components.html'>Components</NavItem>
+    return (
+      <Navbar brand="Ben's Bargains" right>
+        <NavItem href='#'>Getting started</NavItem>
+        <NavItem href='./login'>Login</NavItem>
       </Navbar>
     )
   }
