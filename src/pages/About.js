@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Container, Carousel } from "react-materialize";
+import { Row, Col, Container, Carousel, Card } from "react-materialize";
 
 const About = () =>
   <div>
@@ -15,12 +15,11 @@ const About = () =>
         'https://lorempixel.com/800/400/food/5'
       ]} />
       <Row>
-        <Col size="md-12">
+        <Col size="md-2" />
+        <Col size="md-8">
+          <Card className="grey lighten-4">
           <h1>Welcome to Ben's Bargain Bin!</h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col size="md-12">
+          </Card>
         </Col>
       </Row>
     </Container>
