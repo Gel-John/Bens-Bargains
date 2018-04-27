@@ -7,7 +7,7 @@ class Login extends Component {
     render() {
         return (
             <Container>
-                <div class="pads">
+                <div class="space">
                     <Row>
                         <Input placeholder="username" s={6} label="First Name" />
                         <Input type="password" label="password" s={6} />
