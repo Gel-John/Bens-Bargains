@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <Navbar brand="Ben's Bargains" right>
-        <NavItem href='#'>Getting started</NavItem>
+        {/* <NavItem href='#'>Getting started</NavItem> */}
         <NavItem href='./login'>Login</NavItem>
       </Navbar>
     )

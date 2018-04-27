@@ -1,17 +1,22 @@
 import React, { Component } from "react";
-import { Row, Input } from "react-materialize";
+import { Row, Input, Container } from "react-materialize";
+import "./Login.css";
 
 class Login extends Component {
   
     render() {
-      return (
-        <Row>
-            <Input placeholder="Placeholder" s={6} label="First Name" />
-            <Input s={6} label="Last Name" />
-            <Input s={12} label="disabled" defaultValue="I am not editable" disabled />
-            <Input type="password" label="password" s={12} />
-            <Input type="email" label="Email" s={12} />
-        </Row>
+        return (
+            <Container>
+                <div class="pads">
+                    <Row>
+                        <Input placeholder="username" s={6} label="First Name" />
+                        <Input type="password" label="password" s={6} />
+                        <button className="btn waves-effect waves-light red" type="submit" name="action">
+                        Login
+                        </button>
+                    </Row>
+                </div>
+            </Container>
       )
     }
 }
