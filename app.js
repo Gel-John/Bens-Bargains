@@ -1,27 +1,19 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
+const routes = require("./routes/route");
+
 const app = express();
-// const apiRoutes = require("./routes/apiRoutes");
-
-// Serve up static assets
-app.use(express.static(path.join(__dirname, "./public/index.html")));
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
 app.use(bodyParser.json());
-// Use apiRoutes
-// app.use("/api", apiRoutes);
+const port = 4500;
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  // res.send("hello world")
-});
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
+app.use(routes);
+//test our route
+app.get("/", function(req, res) {
+  res.send("hello 🌎");
 });
+//listen for requests
+app.listen(port, () => {
+console.log('🌎 live at ', port);
+})
