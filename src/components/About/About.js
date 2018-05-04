@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Container, Carousel, Card } from "react-materialize";
+import bottle from "./bottle.jpg";
 
 const About = () =>
   <div>
@@ -12,7 +13,8 @@ const About = () =>
         'https://lorempixel.com/800/400/food/2',
         'https://lorempixel.com/800/400/food/3',
         'https://lorempixel.com/800/400/food/4',
-        'https://lorempixel.com/800/400/food/5'
+        'https://lorempixel.com/800/400/food/5',
+        bottle
       ]} />
       <Row>
         <Col size="md-2" />
